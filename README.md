@@ -1,6 +1,12 @@
-# DVC test
+# DVC
 
 Testing [Data Version Control](https://dvc.org/doc/start/data-versioning).
+
+- [DVC](#dvc)
+  - [Getting started](#getting-started)
+  - [Making changes to raw data](#making-changes-to-raw-data)
+  - [Switch to a previous version of the data](#switch-to-a-previous-version-of-the-data)
+
 
 ## Getting started
 
@@ -60,7 +66,7 @@ Revert `data.xml.dvc` file (essentially change the hash that identifies the data
 $ git checkout HEAD^n data/data.xml.dvc
 ```
 
-Now apply the changes (i.e. bring back the raw data from the `.dvc/cache`):
+Now resolve the changes (i.e. bring back the raw data from the `.dvc/cache`):
 ```
 $ dvc checkout
 ```
