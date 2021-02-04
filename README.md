@@ -51,3 +51,16 @@ $ git add data/data.xml.dvc
 
 This results in a modified hash in the `data.xml.dvc` file, and an updated `.dvc/cache`, now containing both file versions,
 identified by their hashes.
+
+
+## Switch to a previous version of the data
+
+Revert `data.xml.dvc` file (essentially change the hash that identifies the data):
+```
+$ git checkout HEAD^n data/data.xml.dvc
+```
+
+Now apply the changes (i.e. bring back the raw data from the `.dvc/cache`):
+```
+$ dvc checkout
+```
