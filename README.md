@@ -39,3 +39,15 @@ These two files can now be committed:
 $ git add data/data.xml.dvc data/.gitignore
 $ git commit -m "Run 'dvc get' on sample data, add .dvc file."
 ```
+
+
+## Making changes to raw data
+
+```
+$ vim data/data.xml # make some changes
+$ dvc add data/data.xml
+$ git add data/data.xml.dvc
+```
+
+This results in a modified hash in the `data.xml.dvc` file, and an updated `.dvc/cache`, now containing both file versions,
+identified by their hashes.
