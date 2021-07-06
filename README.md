@@ -4,18 +4,18 @@ Testing [Data Version Control](https://dvc.org/doc/start/data-versioning).
 
 ## Getting started
 
-Initialize `dvc` repo.
+Initialize `dvc` repo:
 ```
 $ dvc init
 ```
 
-Get sample data (or simply add some existent files)
+Get sample data (or simply add some existent files):
 ```
 $ mkdir data
 $ dvc get https://github.com/iterative/dataset-registry get-started/data.xml -o data/data.xml
 ```
 
-Let `dvc` know that this is a large file (e.g. dataset, model etc.)
+Let `dvc` know that this is a large file (e.g. dataset, model etc.):
 ```
 dvc add data/data.xml
 ```
